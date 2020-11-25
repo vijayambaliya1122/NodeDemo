@@ -1,0 +1,168 @@
+{
+    "info": {
+        "_postman_id": "880866d4-7d76-49f1-aaa2-08bd2496c009",
+        "name": "demo",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "users",
+            "item": [
+                {
+                    "name": "signup user",
+                    "_postman_id": "593e57f5-0afa-4d96-8bc8-77c74935780a",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"paras@gmail.com\",\n    \"firstName\": \"paras\",\n    \"lastName\": \"patel\",\n    \"gender\": \"male\",\n    \"birthDate\": \"9-9-9\",\n    \"mobileNumber\": \"12345678\",\n    \"password\": \"1234\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{base}}\/api\/v1\/user\/signup"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "login user",
+                    "_postman_id": "463880b6-e9b9-4b2a-a817-629162e88e1a",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmODczMjZmY2E5YmU1MDc4OGViZjhhNiIsImVtYWlsIjoicGFyYXNAZ21haWwuY29tIiwidHlwZSI6InVzZXIiLCJpYXQiOjE2MDI2OTU4NDB9.WbijE8Z3uitmY3Ya-t88ejJeXgfr3e53ecY1U_U_bdU",
+                                "type": "text",
+                                "disabled": true
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\":\"paras@gmail.com\",\n    \"password\":\"1234\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{base}}\/api\/v1\/user\/login"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "get all user",
+                    "_postman_id": "e49e0cf6-d33f-4f8d-8758-7834adae41cb",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYmU1NTNkZDI0MmI4MjY3NTMwMDczMSIsImVtYWlsIjoicGFyYXMxMkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ0eXBlIjoidXNlciIsImlhdCI6MTYwNjMwOTE4MSwiZXhwIjoxNjM3ODQ1MTgxfQ.gw7t6hN-lvT9wuoDbx_h6ZZYVymOek0D-6qsc-Ia0m8",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{base}}\/api\/v1\/user\/"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "get user by id",
+                    "_postman_id": "48edc24b-cb12-4c44-be2e-c78a0f673c02",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYmU0Zjc2OTg4YmQ3MjRjNTE2YzMxNSIsImVtYWlsIjoicGFyYXNAZ21haWwuY29tIiwidHlwZSI6InVzZXIiLCJpYXQiOjE2MDYzMDc3MDd9.U6qp8JCyRXOw1tTfFQdrJUBqGfvgQc5UQReUla07IAQ",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{base}}\/api\/v1\/user\/5fbe4f76988bd724c516c315"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "delete user by id",
+                    "_postman_id": "605ac523-8d0a-4cc2-ad3e-79c18465130a",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmODczMjZmY2E5YmU1MDc4OGViZjhhNiIsImVtYWlsIjoicGFyYXNAZ21haWwuY29tIiwidHlwZSI6InVzZXIiLCJpYXQiOjE2MDI2OTU5Mjl9.4oNBH9ufopbEqwpfFFEnWPoJtF9amHdsWVIxYf8JVeg",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{base}}\/api\/v1\/user\/5f8731263defec076333d06f"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "update user by id",
+                    "_postman_id": "0525f628-22d8-4b66-85e9-2690b9ca154c",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYmU1NzVhZmYzODJmMjc1MDkwMDhlOCIsImVtYWlsIjoicGFyYXNAZ21haWwuY29tIiwidHlwZSI6InVzZXIiLCJpYXQiOjE2MDYzMDk3MzAsImV4cCI6MTYzNzg0NTczMH0.-RSN9tVAgTjoWMt1Z6s3CC3StnCSBm_lSQbweOsKb_Y",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"_id\": \"5fbe575aff382f27509008e8\",\n    \"firstName\": \"lalo\",\n    \"lastName\": \"patil\",\n    \"gender\": \"male\",\n    \"birthDate\": \"9-9-9\",\n    \"mobileNumber\": \"12345678\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "{{base}}\/api\/v1\/user\/"
+                    },
+                    "response": []
+                }
+            ],
+            "_postman_id": "7d0f5934-630b-4f59-8b6e-d20fa88b89c0",
+            "protocolProfileBehavior": {}
+        }
+    ],
+    "protocolProfileBehavior": {}
+}
